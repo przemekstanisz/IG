@@ -1,0 +1,329 @@
+/* FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* GENERAL */
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center center;
+    background-color: hsl(0, 0%, 96%);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* FRAME */
+
+.frame {
+    width: 74mm;
+    height: 149mm;
+    display: grid;
+    place-content: center center;
+    border-radius: 1.2rem;
+    background-image: radial-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 0%));
+    box-shadow: 10px 10px 20px hsl(0, 0%, 70%);
+}
+
+/* SCREEN */
+
+.screen {
+    border-radius: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    width: 71mm;
+    height: 146mm;
+    display: flex;
+    flex-direction: column;
+}
+
+/* APP ELEMENTS */
+
+.screen__el {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* .screen__el div {
+    border: 1px solid rgb(98, 0, 255);
+} */
+
+/* status bar ------------------------------------- */
+
+.statusBar {
+    height: 3%;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 1rem 1rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.statusBar div {
+    height: 100%;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusBar img {
+    height: 10px;
+}
+
+.statusBar__clock {
+    order: 3;
+    grid-column: 15 / 18;
+}
+
+.statusBar__battery {
+    order: 4;
+    grid-column: 18 / 19;
+}
+
+.statusBar__perc {
+    grid-column: 19 / 21;
+    order: 5
+}
+
+.statusBar__notification {
+    order: -1;
+    grid-column: 1 / 3;
+}
+
+.statusBar__5g {
+    order: 2;
+    grid-column: 14/ 15;
+}
+
+.statusBar__wifi {
+    order: 1;
+    grid-column: 13 / 14;
+}
+
+.statusBar__text {
+    font-size: 0.7rem;
+}
+
+/* action bar ------------------------------------- */
+
+.actionBar {
+    height: 5%;
+    background-color: hsl(0, 0%, 195%);
+    box-shadow: 0px 3px 3px hsl(0, 0%, 85%);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.actionBar div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.actionBar .actionBar__notification {
+    align-items: flex-end;
+}
+
+.actionBar img {
+    width: 50%;
+    height: 50%;
+    object-fit: scale-down;
+}
+
+.actionBar__notification {
+    grid-column: 7 / 8;
+}
+
+.actionBar__dm {
+    grid-column: 8 / 9;
+}
+
+/* story bar ---------------------------------------- */
+
+.storyBar {
+    height: 12%;
+    border-bottom: 2px solid hsl(0, 0%, 90%);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.storyBar__story {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+.storyBar__circle--big {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, hsl(45, 88%, 49%), hsl(306, 87%, 50%));
+}
+
+.storyBar__circle--medium {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.storyBar__circle--small {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: hsl(221, 100%, 50%);
+}
+
+.storyBar__text {
+    font-size: 0.5rem;
+    font-weight: 100;
+}
+
+/* user bar ------------------------------------------- */
+
+.userBar {
+    height: 6%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.userBar__pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userBar__circle--big {
+    height: 80%;
+    width: auto;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, hsl(45, 88%, 49%), hsl(306, 87%, 50%));
+}
+
+.userBar__circle--medium {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.userBar__nick {
+    grid-column: 2 / 6;
+    font-size: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.userBar__nick--main {
+    font-weight: 900;
+}
+
+/* main picture ------------------------------------ */
+
+.mainPic {
+    height: 50%;
+    background-image: url('../img/mainPic.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* social bar -------------------------------------- */
+
+.socialBar {
+    height: 7%;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.socialBar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialBar img {
+    width: 50%;
+    height: 50%;
+    object-fit: scale-down;
+}
+
+.socialBar__save {
+    grid-column: 8 / 9;
+}
+
+/* description ------------------------------------- */
+
+.description {
+    height: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 10px 0 10px;
+    font-size: 0.6rem;
+}
+
+.description__likes,
+.description__nick {
+    font-weight: 900;
+}
+
+/* comments ---------------------------------------- */
+
+.comments {
+    height: 4%;
+    display: flex;
+    justify-content: stretch;
+    font-size: 0.6rem;
+    padding: 0 10px 0 10px;
+    color: hsla(0, 0%, 0%, 0.5);
+}
+
+/* UI bar ------------------------------------------- */
+
+.UIBar {
+    height: 5%;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0px -3px 3px hsl(0, 0%, 85%);
+}
+
+.UIBar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UIBar img {
+    width: 50%;
+    height: 50%;
+    object-fit: scale-down;
+}
