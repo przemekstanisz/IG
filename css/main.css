@@ -18,17 +18,20 @@ img {
 
 body {
     min-height: 100vh;
-    display: grid;
-    place-content: center center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: hsl(0, 0%, 96%);
     font-family: 'Roboto', sans-serif;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 /* FRAME */
 
 .frame {
-    width: 74mm;
-    height: 149mm;
+    min-width: 74mm;
+    min-height: 149mm;
     display: grid;
     place-content: center center;
     border-radius: 1.2rem;
