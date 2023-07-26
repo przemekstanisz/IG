@@ -10,8 +10,20 @@
     box-sizing: border-box;
 }
 
+/* VARIABLES */
+
+:root {
+    /* COLORS */
+    /* USER */
+    --GRADIENT-LIGHT: hsl(45, 88%, 49%);
+    --GRADIENT-DARK: hsl(306, 87%, 50%);
+    --USERBG: hsl(0, 0%, 90%);
+}
+
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* GENERAL */
@@ -67,7 +79,7 @@ body {
 
 .statusBar {
     height: 3%;
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--USERBG);
     border-radius: 1rem 1rem 0 0;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
@@ -124,7 +136,7 @@ body {
 .actionBar {
     height: 5%;
     background-color: hsl(0, 0%, 195%);
-    box-shadow: 0px 3px 3px hsl(0, 0%, 85%);
+    box-shadow: 0px 3px 3px var(--USERBG);
     display: grid;
     grid-template-columns: repeat(8, 1fr);
 }
@@ -159,7 +171,7 @@ body {
 
 .storyBar {
     height: 12%;
-    border-bottom: 2px solid hsl(0, 0%, 90%);
+    border-bottom: 2px solid var(--USERBG);
     grid-template-columns: repeat(5, 1fr);
 }
 
@@ -179,7 +191,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-image: linear-gradient(to right, hsl(45, 88%, 49%), hsl(306, 87%, 50%));
+    background-image: linear-gradient(to right, var(--GRADIENT-LIGHT), var(--GRADIENT-DARK));
 }
 
 .storyBar__circle--medium {
@@ -189,7 +201,7 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     border-radius: 50%;
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--USERBG);
 }
 
 .storyBar__circle--small {
@@ -226,7 +238,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-image: linear-gradient(to right, hsl(45, 88%, 49%), hsl(306, 87%, 50%));
+    background-image: linear-gradient(to right, var(--GRADIENT-LIGHT), var(--GRADIENT-DARK));
 }
 
 .userBar__circle--medium {
@@ -236,7 +248,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     border-radius: 50%;
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--USERBG);
 }
 
 .userBar__nick {
@@ -316,7 +328,7 @@ body {
 .UIBar {
     height: 5%;
     border-radius: 0 0 30px 30px;
-    box-shadow: 0px -3px 3px hsl(0, 0%, 85%);
+    box-shadow: 0px -3px 3px var(--USERBG);
 }
 
 .UIBar div {
